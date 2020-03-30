@@ -60,7 +60,7 @@ var generatePassword = function()
    return '';
   }
      //generate random password based on the characters the user picked
-    for (i = 0; i < 12; i+= typesCount){
+    for (var i = 0; i < passwordLength; i++){
       passwordString += randomString.charAt(Math.floor(Math.random() * randomString.length));
     }
       //return passwordString;
