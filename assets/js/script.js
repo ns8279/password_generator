@@ -16,7 +16,7 @@ var generatePassword = function()
   //check if the length of the password is long enough
   if (passwordLength >= 8 && passwordLength < 128) {
     // ask th user if they want to have special characters
-    var useSpecialChar = (window.prompt("Do you wish to include special characters in your password?")).toLowerCase();
+    var useSpecialChar = (window.prompt("Do you wish to include special characters in your password? Type yes or y to confirm.")).toLowerCase();
     //if yes
     if(useSpecialChar === "yes" || useSpecialChar === "y") {
       randomString = randomString + specialChar;
@@ -24,7 +24,7 @@ var generatePassword = function()
     }
 
     //ask the user if they want to have numbers 
-    var useNumber = (window.prompt("do you wish to include Numbers in your password?")).toLowerCase();
+    var useNumber = (window.prompt("do you wish to include Numbers in your password?Type yes or y to confirm.")).toLowerCase();
     //if yes
     if (useNumber === "yes" || useNumber === "y") {
       randomString = randomString + number;
@@ -32,7 +32,7 @@ var generatePassword = function()
     }
 
     //ask the user if they want to have lower case alphabets
-    var useLowerBets = (window.prompt("Do you wish to include lower case alphabets in your password?")).toLowerCase();
+    var useLowerBets = (window.prompt("Do you wish to include lower case alphabets in your password?Type yes or y to confirm.")).toLowerCase();
     //if yes
     if (useLowerBets === "yes" || useLowerBets === "y") {
       randomString = randomString + lowerAlpha;
@@ -40,7 +40,7 @@ var generatePassword = function()
     }
 
     //ask the user if they want to have upper case alphabets
-    var useUpperBets = (window.prompt("Do you wish to include Upper case alphabets in your password?")).toLowerCase();
+    var useUpperBets = (window.prompt("Do you wish to include Upper case alphabets in your password?Type yes or y to confirm.")).toLowerCase();
     //if yes
     if (useUpperBets === "yes" || useUpperBets === "y") {
       randomString = randomString + upperAlpha;
@@ -53,7 +53,7 @@ var generatePassword = function()
   
   const typesCount = useSpecialChar + useLowerBets +useUpperBets + useNumber;
   //console.log('typesCount:', typesCount);
-  const typesArr = [useSpecialChar, useLowerBets, useUpperBets, useNumber].filter (item => Object.values(item[0]));
+  //const typesArr = [useSpecialChar, useLowerBets, useUpperBets, useNumber].filter (item => Object.values(item[0]));
   //console.log('typesArr:', typesArr);
 
   if (typesCount === 0){
